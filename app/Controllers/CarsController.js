@@ -5,14 +5,6 @@ import { getFormData } from "../Utils/FormHandler.js";
 import { Pop } from "../Utils/Pop.js";
 import { setHTML } from "../Utils/Writer.js";
 
-
-// NOTE CRUD METHODS
-// ✅ CREATE || POST
-// ✅ READ || GET
-// ⬛ UPDATE || PUT
-// ✅ DESTROY || DELETE
-
-
 function _drawCars() {
   let template = ''
   appState.cars.forEach(c => template += c.CarCard)
@@ -27,7 +19,6 @@ export class CarsController {
     appState.on('cars', _drawCars)
   }
 
-  // ✅ READ || GET
   async getCars() {
     try {
       await carsService.getCars()
@@ -38,7 +29,6 @@ export class CarsController {
     }
   }
 
-  // ✅ CREATE || POST
   async createCar() {
     try {
       window.event.preventDefault()
@@ -53,7 +43,6 @@ export class CarsController {
     }
   }
 
-  // ✅ DESTROY || DELETE
   async removeCar(carId) {
     try {
       if (await Pop.confirm()) {

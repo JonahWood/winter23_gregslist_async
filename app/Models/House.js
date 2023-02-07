@@ -14,11 +14,10 @@ export class House{
     return `
     <div class="col-md-4 mb-3">
     <div class="card">
-        <img src="${this.img}" class="card-img-top"
-        althouse">
+        <img src="${this.img}" class="card-img-top" alt="house">
         <div class="card-body">
         <div class="card-title fs-5">${this.bedrooms + ' ' + this.bathrooms}</div>
-        <p>${this.description ? this.description : "It's a house"}</p>
+        <p>${this.description ? this.description : "Its a house"}</p>
         <div class="d-flex justify-content-between">
         <button class="btn ms-1 btn-danger" type="button" onclick="app.housesController.removeHouse('${this.id}')">Delete House!</button>
         <button data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn ms-1 btn-info" type="button" onclick="app.housesController.drawForm('${this.id}')">Edit Car!</button>
